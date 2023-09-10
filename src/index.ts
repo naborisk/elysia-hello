@@ -3,6 +3,7 @@ import { Elysia } from 'elysia'
 let todos: Array<string> = []
 
 const app = new Elysia()
+  .get('/', () => 'hello!')
   .get('/todos', () => {
     return todos
   })
