@@ -7,7 +7,7 @@ const app = new Elysia()
     return todos
   })
   .post('/todos/add/:todo', ({ params }) => {
-    todos.push('todo')
+    todos.push(params.todo)
     return `added ${params.todo}`
   })
   .delete('/todos/delete/:todo', ({ params }) => {
